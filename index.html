@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>File and Sprint Catalogue</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+    body{
+        background-color: rgb(227, 229, 186);
+        margin-left: 20px;
+    }
+    .wrapper{
+        width:1000px;
+        margin:auto;
+        padding: 5px;
+        padding-top: 40px; 
+        background-color:rgb(204, 224, 255);
+    }
+    .imgSizer{
+        width: 700px;
+        margin-bottom: 20px;
+        
+    }
+    .vid_div{
+        margin-bottom: 30px;
+    }
+    .emphasise{
+        font-style: italic;
+        font-weight:bolder; 
+
+    }
+    h1{
+        text-align: center;
+        border-top: 1px solid #ffffff;
+        padding-top: 10px;
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 10px;
+    }
+    h2{
+        text-align: center;
+    }
+
+    
+
+    
+
+    </style>
+</head>
+<body>
+    <div class = "wrapper">
+
+    <h1>My Drawing Application</h1>
+            
+    <p>My aim is to a canvas which a user can utilise to create artwork</p>
+    <p>I have made eight sprints to achieve this. Over each sprint I have developed the program to create a potentially shippable product</p>
+    <p>Below is the planning, testing and finished products of each of these sprints</p>
+    
+    <h2>Relevent Implications</h2>
+    <h3>Future Proofing</h3>
+    <p>My program is designed so new features can be added easily and old ones removed<br>
+        There are multiple aspects my code that allow for simple redesigning of the program<br>
+        My program elements (eg.buttons, colours, shapes etc.)have all been programmed as objects, means each is contained in a self-contained modular piece of code, 
+        that takes a defined set of parameters to work. Many of these take basic mouse data and colour information<br>
+        All my objects are built to a similar structure and compulsorily contain an update function. This means they can appear on the interface using the update call<br>
+        The management of most of the objects happens in a central place (main.js). This is to allow efficient addition and removal
+        of current elements, and have a logical space to add new features<br>
+        I have also thoroughly and precisely commented my code, so it can be easily interpreted by other users
+        </p>
+
+    <h3>Functionality</h3>
+    <p>My program fucntions well - is free of bugs and loads quickly<br>
+    This has been achieved through creating my code in pure jaavscript, has no graphics so loads very quickly.
+    I have tested by using a live web server to store my versions, and have observed loading performance.
+    To ensure the program works well I have systematically tested it. I tested user interactions - position of clicking and direction of dragging. 
+    This has also included careful checks around boundaries.
+    The use of Maths.abs function was also discovered after the testing failures drawing circular shapes.
+    All new components were tested prior to being added to the main program
+    At various stages in sprints, I used console logging to analyse boundary test functions and to locate problems with bugs appeared. 
+    </p>
+
+    <h3>Examples of trialling and decision making</h3>
+    <p>
+        Trialing different options for allowing the users to draw circles on screen, giving circular or rectangular guides
+
+        Effectively using information from testing and trialling to improve the functionality of the outcome
+
+        Finding situations were objects drew outside of the drawing area (in spite of having in-boundary parameters) led to the use of the clip() function.
+        
+
+
+    </p>
+
+
+    <h2>Testing</h2>
+    <hr>
+    <h3>Sprint One</h3>
+    <p>In sprint one I aim to create a box in which users can draw<br>
+    When the user down drags in this area, the program will assess whether the mouse is within the given perimeters of the box<br>
+    If it is inside the boundaries of the box, drawn rectangle will be left on screen after mouse is released<br></p>
+    <h4>My Trello plan </h4>
+    <div><img class="imgSizer" src="screenCaptures/sprintOneTrello.jpg"></div>
+    <h4> Testing </h4>
+    <p> This first test uses console logging to test if my boundary function works. This is shown by the 'true' or 'false' responses in 
+        the console
+    </p>
+    <div class="vid_div"><video width="600"  controls>
+            <source src="Videos/sprintOneConsoleTest.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p> This second test explores how my dragging rectangle fucntions, and whether it can do this with given boundaries.<br>
+        This could be improved, by stopping the dragged rectangle's outline from passing boundary box outside
+        when shown to not be inside boundary box.
+        </p>
+    <div class="vid_div"><video width="600"  controls>
+            <source src="Videos/sprintOnetest.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+        <ul>
+                <li><a href="Sprints/firstSprint/sprint.html"> My first sprint</a> 
+                    Here is the link to my first sprint</li>
+        </ul>
+        
+        <hr>
+        <h3>Sprint Two</h3>
+        <p>My aim is to create a page with the same fucntionality as above, except en ellipse will be dragged .<br>
+            I will need to create an ellipse function to do this.
+</p>
+        <h4> Testing </h4>
+        <div><img class="imgSizer" src="screenCaptures/secondSprintTrello.jpg"></div>
+        <p> This tests the drawing of the ellipse within the given boundary box confinements<br>
+            An error seen in testing video is the outline box does not disapear when it <br>
+            hits the canvas - I must click for it to recognise I have left the boundary<br>
+            and so will be unable to draw an ellipse<br>
+            </p>
+     <div class="vid_div"><video width="600"  controls>
+        <source src="Videos/sprintTwoTesting.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </div>
+
+    <ul>
+            <li><a href="Sprints/secondSprint/sprint.html"> My second sprint</a> 
+                Here is the link to my second sprint</li>
+    </ul>
+
+    <hr>
+    <h3>Sprint Three</h3>
+    <p>My aim is to add two buttons to the canvas on the left of my boundary box.<br>
+        These buttons will mean a user can chose to draw either an ellipse or a rectangle.
+        They will be labelled 'Ellipse' or 'Button' to correlate with their shapes
+</p>
+    <h4>My Trello plan </h4>
+    <div><img class="imgSizer" src="screenCaptures/thirdSprintTrello.jpg"></div>
+    <h4>Testing</h4>
+
+    <p>My testing video shows the use of both buttons do draw rectangles and ellipses<br>
+        It also shows how these will still only function insie the boundary box</p>
+        <div class="vid_div"><video width="600"  controls>
+                <source src="Videos/sprintThreeTesting.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            </div>
+    
+
+    <ul>
+            <li><a href="Sprints/thirdSprint/sprint.html"> My third sprint</a> 
+                Here is the link to my third sprint</li>
+    </ul>
+
+
+    <hr>
+    <h3>Sprint Four</h3>
+    <p>In sprint four I aim to create colour buttons<br>
+    These will sit below the shape buttons, and allow user to draw shapes in different colours<br>
+    I will create a few of these in varying colours to allow the user some freedom and creativity<br>
+    If not colour button is clicked, objects will be drawn in default colour of black</p>
+    <h4>My Trello plan </h4>
+    <div><img class="imgSizer" src="screenCaptures/fourthSprintTrello.jpg"></div>
+    <h4> Testing </h4>
+    <p> This testing shows when colour button is clicked before clicking a shape button<br>
+        Shape will be drawn in correlating colour. Shapes will all be drawn in this colour until new colour button selected<br>
+        When shape button is clicked and colour button has not been clicked, objects are drawn in black
+    </p>
+    <div class="vid_div"><video width="600"  controls>
+            <source src="Videos/sprintFourTesting.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        
+        </div>
+    
+<ul>
+        <li><a href="Sprints/fourthSprint/sprint.html"> My fourth sprint</a> 
+            Here is the link to my fourth sprint</li>
+</ul>
+
+        <hr>
+    <h3>Sprint Five</h3>
+    <p>In sprint five I aim to create a box in which users can draw<br>
+    When the user down drags in this area, the program will assess whether the mouse is within the given perimeters of the box<br>
+    If it is inside the boundaries of the box, drawn rectangle will be left on screen after mouse is released<br></p>
+    <h4>My Trello plan </h4>
+    <div><img class="imgSizer" src="screenCaptures/fifthSprintTrello.jpg"></div>
+    <h4> Testing </h4>
+        <p> This test shows how my circle button functions.<br>
+        When clicked, it will draw a black circle of a size determined by users drag of mouse<br>
+        When a colour button is clicked after clicking circle button, dragged circle will be of
+        correlating colour.
+        </p>
+    <div class="vid_div"><video width="600"  controls>
+            <source src="Videos/sprintFiveTesting.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        
+    </div>
+
+        <ul>
+                <li><a href="Sprints/fifthSprint/sprint.html"> My fifth sprint</a> 
+                    Here is the link to my first sprint</li>
+        </ul>
+
+        <hr>
+    <h3>Sprint Six</h3>
+    <p>In sprint five I aim to create reset and undo buttons<br>
+    The undo button will clear the user's last action in the drawing space<br>
+    This allows them to correct any mistakes they may have made, or change bits of their creation<br>
+    The reset button will allow the user to completely refresh their drawing space and start again
+    </p>
+
+    <h4>My Trello plan </h4>
+    <div><img class="imgSizer" src="screenCaptures/sixthSprintTrello.jpg"></div>
+    <h4> Testing </h4>
+        <p> This test shows how my reset and undo buttons function.<br>
+        When clicked, undo button will get rid of the last dragged object<br>
+        When reset it clicked, all dragged objects will disappear
+        </p>
+    <div class="vid_div"><video width="600"  controls>
+            <source src="Videos/sprintSixTesting.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+    
+
+        <ul>
+                <li><a href="Sprints/sixthSprint/sprint.html"> My sixth sprint</a> 
+                    Here is the link to my first sprint</li>
+        </ul>
+
+        <hr>
+        <h3>Sprint Seven</h3>
+        <p>In sprint seven I aim to create a line button<br>
+        The line button will draw a straigt line after it has been clicked according to direction of mouse<br>
+        The line width will be set in the code, and length and direction determined by users mouse movement<br>
+        Colour will be black unless a colour button is clicked - then line will be of correlating colour
+
+        </p>
+    
+        <h4>My Trello plan </h4>
+        <div><img class="imgSizer" src="screenCaptures/seventhSprintTrello.jpg"></div>
+        <h4> Testing </h4>
+            <p> This test shows how my line button functions.<br>
+            When clicked, line will begin to draw after mouse click<br>
+            Line will be drawn as the mouse moves<br>
+            Line will end once the mouse down event has ended/when the mouse comes up from clicking
+            The resulting line is left on the screen 
+            </p>
+        <div class="vid_div"><video width="600"  controls>
+                <source src="Videos/sprintSevenTesting.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+            </div>
+        
+    
+            <ul>
+                    <li><a href="Sprints/seventhSprint/sprint.html"> My seventh sprint</a> 
+                        Here is the link to my seventh sprint</li>
+            </ul>
+    
+        <hr>
+        <h3>Sprint Eight</h3>
+        <p>In sprint eight I aim to create a brush button<br>
+        The brush button will draw a brush stroke after it has been clicked according to direction of mouse<br>
+        The brush stroke will be composed of a line of small circles.<br>
+        When clicked wihout also clicking a colour button, the stroke will be drawn black.
+
+        </p>
+    
+        <h4>My Trello plan </h4>
+        <div><img class="imgSizer" src="screenCaptures/eigthSprintTrello.jpg"></div>
+        <h4> Testing </h4>
+            <p> This test shows how my brush button functions.<br>
+            When clicked, brush button draw brush stroke<br>
+            Its colour will depend on whether or not a colour button is clicked<br>
+            Its direction and length will depend on how the user moves the mouse.
+            One issue with the brush stroke is when the mouse is moved very quickly, the circles
+            do not keep up with the speed, meaning there are large gaps between each circle and 
+            so it is not a very good 'stroke' motion.
+            </p>
+        <div class="vid_div"><video width="600"  controls>
+                <source src="Videos/sprintEightTesting.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+            </div>
+        
+    
+            <ul>
+                    <li><a href="Sprints/eighthSprint/sprint.html"> My eighth sprint</a> 
+                        Here is the link to my final sprint. This is the finsihed product of my project</li>
+            </ul>
+    
+
+
+        
+    
+    
+        </div>
+    
+        </div>
+</body>
+    </html>
